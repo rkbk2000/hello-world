@@ -26,3 +26,5 @@ add_executable (helloworld hello.c)
 # public include directories we will use those link directories when building
 # helloDemo
 #target_link_libraries (helloDemo LINK_PUBLIC Hello)
+
+#Added 1 comment

@@ -121,10 +121,6 @@ depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__maybe_remake_depfiles = depfiles
 am__depfiles_remade = ./$(DEPDIR)/hello.Po
 am__mv = mv -f
-AM_V_lt = $(am__v_lt_@AM_V@)
-am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
-am__v_lt_0 = --silent
-am__v_lt_1 = 
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 AM_V_CC = $(am__v_CC_@AM_V@)
@@ -269,7 +265,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = foreign
-helloworld_SOURCES = src/hello.c
+helloworld_SOURCES = hello.c
 all: all-am
 
 .SUFFIXES:
@@ -381,20 +377,6 @@ am--depfiles: $(am__depfiles_remade)
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
-
-hello.o: src/hello.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT hello.o -MD -MP -MF $(DEPDIR)/hello.Tpo -c -o hello.o `test -f 'src/hello.c' || echo '$(srcdir)/'`src/hello.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/hello.Tpo $(DEPDIR)/hello.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/hello.c' object='hello.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o hello.o `test -f 'src/hello.c' || echo '$(srcdir)/'`src/hello.c
-
-hello.obj: src/hello.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT hello.obj -MD -MP -MF $(DEPDIR)/hello.Tpo -c -o hello.obj `if test -f 'src/hello.c'; then $(CYGPATH_W) 'src/hello.c'; else $(CYGPATH_W) '$(srcdir)/src/hello.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/hello.Tpo $(DEPDIR)/hello.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/hello.c' object='hello.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o hello.obj `if test -f 'src/hello.c'; then $(CYGPATH_W) 'src/hello.c'; else $(CYGPATH_W) '$(srcdir)/src/hello.c'; fi`
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
